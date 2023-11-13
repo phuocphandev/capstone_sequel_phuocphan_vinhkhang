@@ -1,5 +1,6 @@
 import express from "express";
 import { deleteImage, getCheckImage, getCommentByIdImage, getCreatedImage, getDetailImage, getImagesList, getImagesListByName, getSavedImage, postCommentImage, postImage, saveImage } from "../controllers/imageController.js";
+import { lockApi } from "../config/jwt.js";
 
 export const imageRouter = express.Router()
 imageRouter.get("/get-images-list",lockApi, getImagesList)

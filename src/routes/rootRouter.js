@@ -1,8 +1,8 @@
 import express from "express";
-import { userRouter } from "./userRouter.js";
-import { ImageRouter } from "./ImageRouter.js";
+import { userRouter } from "./userRouter";
+import { imageRouter } from "./imageRouter";
 
 export const rootRouter = express.Router()
 
 rootRouter.use("/user", userRouter)
-rootRouter.use("/image", ImageRouter)
+rootRouter.use("/image", imageRouter)
